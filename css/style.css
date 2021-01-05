@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.equal-padding {
+    padding: 15px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background-color: #f1f1f1;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo a {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333333;
+}
+
+nav ul li {
+    display: inline;
+    padding: 0px 20px;
+}
+
+nav ul li a {
+    font-size: 13px;
+    color: #555555;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* One Col */
+
+.sec-one-col {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sec-one-col-box {
+    width: 100%;
+    min-height: 200px;
+    background-color: #cccccc;
+}
+
+/* Two col */
+
+.sec-two-col {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sec-two-col-box {
+    width: 49%;
+    min-height: 200px;
+    background-color: #cccccc;
+}
+
+/* Three col */
+
+.sec-three-col {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sec-three-col-box {
+    width: 32%;
+    min-height: 200px;
+    background-color: #cccccc;
+}
+
+
+/* Responsive start */
+
+/* 1024-Ipad landscape */
+/* 768-Ipad  portrait*/
+/* Under width 767-Ipad  portrait*/
+
+/* Do'nt use min-width use max-width */
+
+@media(max-width: 767px){
+
+    .mobile-menu{
+        cursor: pointer;
+    }
+
+    .mobile-menu span {
+        width: 40px;
+        height: 2px;
+        background: #333333;
+        display: block;
+        margin: 8px 0;
+       
+    }
+
+    nav {
+        position: absolute;
+        right: -100%;
+        width: 100%;
+        transition: 1s all;
+        background: #333;
+    }
+
+    nav.active {
+        left: 0;
+        right: auto;
+    }
+
+    nav ul li {
+        display: block;
+        padding: 10px 15px;
+        border-bottom: 1px solid #555;
+    }
+
+    nav ul li a {
+        color: #cccccc;
+    }
+
+    .sec-two-col {
+        display: block;
+    }
+
+    .sec-two-col-box {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .sec-three-col {
+        display: block;
+    }
+
+    .sec-three-col-box {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
